@@ -39,4 +39,49 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+//Navagation
+const navItems = document.getElementsByTagName('a');
+navItems[0].textContent = siteContent.nav["nav-item-1"];
+navItems[1].textContent = siteContent.nav["nav-item-2"];
+navItems[2].textContent = siteContent.nav["nav-item-3"];
+navItems[3].textContent = siteContent.nav["nav-item-4"];
+navItems[4].textContent = siteContent.nav["nav-item-5"];
+navItems[5].textContent = siteContent.nav["nav-item-6"];
+const nav = document.querySelector("nav");
+const childNavTwo = document.createElement("a")
+const childNav = document.createElement("a");
+childNavTwo.textContent = "Blog";
+childNav.textContent = "Team";
+nav.prepend(childNavTwo);
+nav.appendChild(childNav);
+
+
+//Image
+const topImg = document.querySelector('#cta-img');
+topImg.setAttribute("src", "img/header-img.png");
+
+const midImg = document.querySelector("#middle-img");
+midImg.setAttribute("src", "img/mid-page-accent.jpg");
+
+//header
+const headEl = document.querySelector(".cta-text h1");
+headEl.textContent = "DOM\n IS\n AWESOME";
+headEl.style.width = "300px";
+headEl.style.display = "flex-wrap";
+headEl.style.flexDirection = "column";
+headEl.style.textAlign = "center";
+const button = document.querySelector(".cta-text button");
+button.textContent = "Get Started";
+
+//Mid content
+const midContent = document.getElementsByTagName("h4");
+midContent[0].textContent = "Features";
+midContent[1].textContent = "About";
+midContent[2].textContent = "Services";
+midContent[3].textContent = "Product";
+midContent[4].textContent = "Vision";
+
+
+
