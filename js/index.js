@@ -106,6 +106,20 @@ const address = document.querySelectorAll(".contact p");
 address[0].textContent = "123 Way 456 Street \n Somewhere, USA"
 address[1].textContent = "1 (888) 888-8888"
 address[2].textContent = "sales@greatidea.io"
+const contactContainer = document.querySelector(".contact");
+
+//My Button
+const myBtn = document.createElement("button");
+myBtn.textContent = "Click Here";
+myBtn.style.backgroundColor = "darkBlue";
+myBtn.style.color = "white";
+myBtn.style.padding = "10px 30px";
+myBtn.style.cursor = "pointer";
+contactContainer.appendChild(myBtn);
+myBtn.addEventListener("click", myFunction)
+function myFunction() {
+  alert("Have Fun!")
+}
 
 //Footer
 const copy = document.querySelector("footer p");
